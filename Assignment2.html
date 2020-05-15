@@ -1,0 +1,212 @@
+<html>
+<head>
+  <title> Ultra Corporation </title>
+  <meta name="viewport" content="width-device-width, initial-scale=1">
+  <style>
+    body {background-color: lightblue;  border-radius: 20px; text-align: center; padding: 40px; text-shadow: 1px 2px 2px pink;background-image: linear-gradient(lightblue, lightgreen);}
+    p {font-style: italic}
+    .greenTxt {color:green}
+
+    #iPhone11 {
+      width:250px;
+      height:200px;
+    }
+
+    #AppleTV {
+      width:250px;
+      height:200px;
+    }
+
+    #PS4Pro {
+      width:250px;
+      height:200px;
+    }
+
+    .grayTxt {color:gray}
+
+    .row_wrapper {
+      display:grid;
+      grid-template-columns: 500px repeat(2, 1fr);
+      grid-auto-rows: minmax(300px,auto);
+    }
+
+    .column1 {
+      grid-column-start: 1;
+      grid-column-end: 1;
+      grid-row-start: 1;
+      grid-row-end: 2;
+
+    }
+
+    .column2 {
+      grid-column-start: 2;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+
+    }
+
+    .column3 {
+      grid-column-start: 3;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+
+    }
+
+    #iPhone11:hover {
+      transition: 2s;
+      transform: rotate3d(10, 10, 10, 360deg);
+
+    }
+
+    #AppleTV:hover {
+      transition: 2s;
+      transform: rotate3d(10, 10, 10, 360deg);
+    }
+
+    #PS4Pro:hover {
+      transition: 2s;
+      transform: rotate3d(10, 10, 10, 360deg);
+
+    }
+
+    .row {
+      padding: 8px;
+      border-radius: 15px;
+      grid-area: row;
+    }
+
+    .column1 {
+      padding: 8px;
+      border-radius: 15px;
+      grid-area: column1;
+    }
+
+    .column2 {
+      padding: 8px;
+      border-radius: 15px;
+      grid-area: column2;
+    }
+
+    .column3 {
+      padding: 8px;
+      border-radius: 15px;
+      grid-area: column3;
+    }
+    .row_wrapper {
+      padding: 10px;
+      display: grid;
+      grid-template-areas:
+        "row"
+        "column1"
+        "column2"
+        "column3"
+    }
+
+    @media only screen and (min-width: 700px) {
+      .row_wrapper {
+        padding: 10px;
+        display: flex;
+        grid-template-columns: none;
+        grid-template-areas:
+          "row"
+          "column1"
+          "column2"
+          "column3"
+      }
+      div row {
+        padding: 8px;
+        border-radius: 10px;
+        flex-direction: column;
+      }
+    }
+    video {
+      width:400px;
+      height:auto;
+    }
+    @media only screen and (max-width: 1000px) {
+      .row_wrapper {
+        width: 100%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 150%;
+      }
+      .footer_div {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+
+  </style>
+</head>
+<body>
+<p class="greenTxt">
+  <header>
+    <h1> Ultra Corporation </h1>
+  </header>
+  <div class="row_wrapper">
+    <div class="row" style="background-color: violet;">
+      <h2> Welcome To Ultra Corporation , Where We Sell The Latest Phones And Gaming Consoles </h2>
+      <video style="align-self: auto" controls>
+        <source src="iPhone11_Review.mp4" type="video/mp4" id="iPhone11Review">
+      </video>
+    </div>
+
+
+    <div class="column1" style="background-color:gray;">
+      <img id="iPhone11" src="https://thumbor.forbes.com/thumbor/711x469/https://blogs-images.forbes.com/gordonkelly/files/2019/09/Screenshot-2019-09-10-at-22.27.17-Edited.jpg?width=960" >
+      <h2> Apple iPhone 11 </h2>
+      <p> Storage Size & Price: 64 GB, 128 GB, 256 GB $1200.
+      Stats: Height: 5.94 inches (150.9 mm), Width: 2.98 inches (75.7 mm), Depth: 0.33 inch (8.3 mm), Weight: 6.84 ounces (194 grams).
+      Screen Quality/Camera: Liquid Retina HD display 6.1â€‘inch (diagonal) all-screen LCD Multi-Touch display with IPS technology 1792â€‘byâ€‘828â€‘pixel resolution at 326 ppi 1400:1 contrast ratio (typical) True Tone display Wide color display (P3) Haptic Touch 625 nits max brightness (typical) Fingerprintâ€‘resistant oleophobic coating Support for display of multiple languages and characters simultaneously. Dual 12MP Ultra Wide and Wide cameras Ultra Wide: Æ’/2.4 aperture and 120Â° field of view Wide: Æ’/1.8 aperture 2x optical zoom out; digital zoom up to 5x Portrait mode with advanced bokeh and Depth Control Portrait Lighting with six effects (Natural, Studio, Contour, Stage, Stage Mono, High-Key Mono) Optical image stabilization (Wide) Fiveâ€‘element lens (Ultra Wide); sixâ€‘element lens (Wide) Brighter True Tone flash with Slow Sync Panorama (up to 63MP) 100% Focus Pixels (Wide) Night mode Auto Adjustments Next-generation Smart HDR for photos Wide color capture for photos and Live Photos Advanced redâ€‘eye correction Auto image stabilization Burst mode Photo geotagging Image formats captured: HEIF and JPEG.
+      Processor: Uses Apple's A13 Bionic chip Thirdâ€‘generation Neural Engine
+      The iPhone is Available On All Famous Carriers: Verizon, AT&T, T-Mobile, Sprint And More! </p>
+      </div>
+<div class="column2" style="background-color:green;">
+  <img id="AppleTV" src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/apple-tv-hero-select-201709_FMT_WHH?wid=518&amp;hei=446&amp;fmt=jpeg&amp;qlt=80&amp;op_usm=0.5,0.5&amp;.v=1504731332280">
+  <h2> Apple TV </h2>
+  <p> Overview: From TV shows, movies, and live sports to thousands of games and apps, itâ€™s all available on Apple TV. Enjoy content from iTunes and apps like Amazon Prime Video, ESPN, Hulu, and Netflix â€” or use the Siri Remote to find just what you want. And with the Apple TV App, you can enjoy all your favorite content on iPhone, iPad, and Apple TV.
+    Stats: Height: 1.4 inches (35 mm) , Width: 3.9 inches (98 mm), Depth: 3.9 inches (98 mm), Weight: 15 ounces (425 g). HDMI 1.43
+    Ports & Interfaces: 802.11ac Wiâ€‘Fi with MIMO, 10/100BASE-T Ethernet, Bluetooth 4.0 wireless technology, IR receiver, USBâ€‘C for service and support, Builtâ€‘in power supply
+    System Requirements: iTunes purchasing and renting and Home Sharing require iTunes Store account, Requires 802.11 wireless, Ethernet network, or Broadband Internet access, Requires acceptance of the software license terms at <a id="AppleLegal" class="grayTxt" style="color:yellow" href="www.apple.com/legal/sla"></a> www.apple.com/legal/sla, Requires HDMI cable (sold separately)
+    Storage & Price: 32GB $149
+    Processor: A8 chip with 64-bit architecture </p>
+</div>
+<div class="column3" style="background-color:orange;">
+  <img id="PS4Pro" src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/5388/5388900_sd.jpg" height=400 width = 400>
+  <h2> Sony PlayStation 4 Pro </h2>
+  <p> Storage Capacity: 1 TB
+    Supported Services: PlayStation Now, PlayStation Network / Plus
+    Feature: With Motion Control, Blu-ray Compatible, 4K Capable
+    Brand: Sony
+    Color / Theme: Jet Black
+    Wireless Connectivity: Bluetooth, Wi-FiG
+    Media: Blu-Ray
+    Processor: AMD Jaguar 8-Core
+    RAM: 8 GB GDDR5 SDRAM at 217.6 GB/s
+    Video Memory: GDDR5 SDRAM
+    Floating Point Performance: 4.2 TFLOPS
+    Network: Gigabit Ethernet, Bluetooth 4.0 LE, 802.11a/b/g/n/ac
+    Instant Content Supported: Netflix, YouTube
+    HD Streaming: Yes
+    Parental Control Capability: Yes
+    Width: 11.6 in
+    Depth: 12.9 in
+    Height:2.2 in
+    Weight:7.28 lbs </p>
+</div>
+
+</div>
+<div class="footer_div">
+  <p class="grayTxt">
+    Note: All Descriptions, Products And Features Come From <a id="Apple" class="grayTxt" style="color:brown" href="https://www.apple.com"> Apple </a> and <a id="Sony" class="grayTxt" style="color:brown" href="https://www.sony.com"> Sony </a> Respectively.
+  <p class="grayTxt">
+    Copyright Â© 2019 Apple Inc. All rights reserved.
+    Copyright Â© 2019 Sony Corporation.
+    Copyright Â© 2019 Ultra Corporation.
+</div>
+</body>
+</html>
