@@ -1,0 +1,109 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Bridget Riley Op Art Image</title>
+  <style type="text/css">
+    body {
+      width: 100%;
+      height: 100%;
+      border: 23px solid black;
+    }
+    canvas {
+      display: block;
+    }
+    @media only screen and (max-width: 1000px) {
+      #RileyCanvas {
+        width: 100%;
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+<div id= "eventButton">
+  <button onClick = "AccessPermission()"> Access Permission </button>
+</div>
+<canvas id="RileyCanvas"> </canvas>
+<script type = "text/javascript">
+    var xi=0;
+    var yj=0;
+    window.addEventListener('load', (event) => {
+      let load = new Date().getTime() - startTime;
+    console.log( load);
+    });
+    document.addEventListener('readystatechange', (event) => {
+      let state = new Date().getTime() - startTime;
+    console.log( state );
+    });
+drawCanvas(); 
+    function drawCanvas() {
+        let RileyCanvas = document.getElementById("RileyCanvas");
+        var width_canvas = RileyCanvas.width = window.innerWidth;
+        var height_canvas = RileyCanvas.height = window.innerHeight;
+        let RileyCanvasContext = RileyCanvas.getContext('2d');
+        RileyCanvasContext.strokeStyle = 'green';
+        for (var i = 10; i <= 1345; i += 20) {
+            RileyCanvasContext.strokeRect(i+xi+yj, 0, width_canvas+xi, height_canvas +yj);
+        }
+        for (var i= 35; i <= 1325; i +=20) {
+            RileyCanvasContext.strokeStyle = 'lightblue';
+            RileyCanvasContext.lineWidth = 7;
+            RileyCanvasContext.beginPath();
+            RileyCanvasContext.moveTo(i+xi+yj, 0);
+            RileyCanvasContext.lineTo(i+xi+yj, height_canvas);
+            RileyCanvasContext.closePath();
+            RileyCanvasContext.stroke();
+        }
+
+        for (var i = 15; i <= 1450 ; i += 40) {
+            if(i % 2 != 0) {
+                RileyCanvasContext.strokeStyle = '#f05e23'; 
+                RileyCanvasContext.lineWidth = 7;
+                RileyCanvasContext.beginPath();
+                RileyCanvasContext.moveTo(i+yj+xi, 0);
+                RileyCanvasContext.lineTo(i+yj+xi, height_canvas );
+                RileyCanvasContext.closePath();
+                RileyCanvasContext.stroke();
+            }
+        }
+    }
+    
+    function AccessPermission(){
+        if (typeof DeviceMotionEvent !== "undefined") {
+            if (typeof DeviceMotionEvent.requestPermission === "function") {
+alert("enter");
+                DeviceMotionEvent.requestPermission()
+                    .then(response => {
+                        if (response === "granted") {
+                            if (window.DeviceMotionEvent) {
+                                console.log("DeviceMotionEvent supported");
+                                window.addEventListener("devicemotion", handleMotionEvent);
+                            }
+                        }
+                    }).catch(console.error);
+            } else {
+                if (window.DeviceMotionEvent) {
+                    window.addEventListener("devicemotion", handleMotionEvent, false);
+                }
+            }
+        } else {
+            alert("DeviceMotionEvent is not defined");
+        }
+    }
+    window.addEventListener("devicemotion", handleMotionEvent, true);
+    function handleMotionEvent(event) {
+      if(null != event.accelerationIncludingGravity.x);
+        xi = event.accelerationIncludingGravity.x.toFixed(1);
+        if(null != event.accelerationIncludingGravity.y);
+        yj = event.accelerationIncludingGravity.y.toFixed(1);
+        if (xi == null) xi = 0;
+        else xi = xi*7;
+        if (yj == null)   yj = 0;
+        else  yj =  yj*7;
+    window.requestAnimationFrame(drawCanvas);
+    }
+</script>
+</body>
+</html>
