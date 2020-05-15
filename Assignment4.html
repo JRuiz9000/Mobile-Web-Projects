@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+<head> 
+<meta charset="UTF-8">
+<title>Bridget Riley Op Art Image</title>
+<style type="text/css">
+body {
+        width: 100%;
+        height: 100%;
+        border: 23px solid black;
+}
+canvas {
+        display: block;
+}
+@media only screen and (max-width: 1000px) {
+        #RileyCanvas {
+                width: 100%;
+                display: block;
+        }
+}
+</style>
+</head>
+<body>
+<canvas id="RileyCanvas"> </canvas>
+<script type = "text/javascript">
+let RileyCanvas = document.getElementById("RileyCanvas");
+var width_canvas = RileyCanvas.width = window.innerWidth;
+var height_canvas = RileyCanvas.height = window.innerHeight;
+let RileyCanvasContext = RileyCanvas.getContext('2d');
+RileyCanvasContext.strokeStyle = 'green';
+//For loop to set green border
+for (var i = 10; i <= 1345; i += 20) {
+        RileyCanvasContext.strokeRect(i, 0, 10, 1450); //1450 changed from 670
+}
+
+//Draws Blue Lines , made into separate loop to avoid deployment issues
+for (var i= 35; i <= 1325; i +=20) {
+	RileyCanvasContext.strokeStyle = 'lightblue';
+    RileyCanvasContext.lineWidth = 7;
+    RileyCanvasContext.beginPath();
+    RileyCanvasContext.moveTo(i, 0);
+    RileyCanvasContext.lineTo(i, 1450);
+    RileyCanvasContext.closePath();
+    RileyCanvasContext.stroke();
+}
+//Sets constraints draws canvas with Salamander Orange
+function drawCanvas() {
+        
+        for (var i = 15; i <= 1450 ; i += 40) {
+                
+                if(i % 2 != 0) {
+                RileyCanvasContext.strokeStyle = '#f05e23'; //#f05e23 is Salamander Orange
+                RileyCanvasContext.lineWidth = 7;
+                RileyCanvasContext.beginPath();
+                RileyCanvasContext.moveTo(i, 0);
+                RileyCanvasContext.lineTo(i, 1450);
+                RileyCanvasContext.closePath();
+                RileyCanvasContext.stroke();
+                }       
+        
+                /*if(i % 2 == 0) {
+                RileyCanvasContext.strokeStyle = 'lightblue';
+                RileyCanvasContext.lineWidth = 7;
+                RileyCanvasContext.beginPath();
+                RileyCanvasContext.moveTo(i, 0);
+                RileyCanvasContext.lineTo(i, 1450);
+                RileyCanvasContext.closePath();
+                RileyCanvasContext.stroke();
+                }*/
+        }   
+}
+
+drawCanvas();  
+
+</script>
+</body>
+</html>
