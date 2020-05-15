@@ -1,0 +1,250 @@
+<html>
+     <head>
+     	<title> Juan Ruiz (PortFolio) </title>
+     	<meta name="viewport" content="width-device-width, initial-scale=1"> 
+     	<style>
+     		body {background-image: linear-gradient(lightblue, teal);  border-radius: 20px; text-align: center; padding: 40px; text-shadow: 1px 2px 2px lightblue}
+     		p {font-style: bold;}
+     		
+            .row_wrapper {
+     			display:grid;
+     			grid-template-columns: 500px repeat(6, 1fr); 
+     	    	grid-auto-rows: minmax(300px);
+     	    	column-gap: 10px;
+                row-gap: 1em;
+     	    }
+     		
+     		.background_info {
+     			grid-column-start: 1;
+     			grid-column-end: 4;
+     			grid-row-start: 1;
+     			grid-row-end: 3;
+
+     		}
+
+     		.Tekovery {
+     			grid-column-start: 1;
+     			grid-row-start: 3;
+     			grid-row-end: 5;
+
+     		}
+
+     		.Fordham_Job {
+     			grid-column-start: 3;
+     			grid-column-end: 3;
+     			grid-row-start: 1;
+     			grid-row-end: 2;
+
+     		}
+
+     		.Robotics_Research {
+     			grid-column-start: 4;
+     			grid-column-end: 4;
+     			grid-row-start: 1;
+     			grid-row-end: 2;
+
+     		}
+
+     		.Technical_Skills {
+     			grid-column-start: 5;
+     			grid-column-end: 5;
+     			grid-row-start: 1;
+     			grid-row-end: 2;
+
+     		}
+
+     		.Projects {
+     			grid-column-start: 6;
+     			grid-column-end: 6;
+     			grid-row-start: 1;
+     			grid-row-end: 2;
+
+     		}
+
+     		.SocialNetworkLinks {
+     			grid-column-start: 7;
+     			grid-column-end: 7;
+     			grid-row-start: 1;
+     			grid-row-end: 2;
+     		}
+            
+           * {box-sizing: border-box;}
+            #JuanTitle:hover {
+            	transition: 2s;
+            	transform: rotate3d(12, 12, 12, 360deg);
+
+            }
+
+            #Tekovery_Inc:hover {
+            	transition: 2s;
+            	transform: rotate3d(12, 12, 12, 360deg);
+
+            }
+
+            #Fordham_Logo:hover {
+            	transition: 2s;
+            	transform: rotate3d(12, 12, 12, 360deg);
+
+            }
+
+            #Robot_Project:hover {
+            	transition: 2s;
+            	transform: rotate3d(12, 12, 12, 360deg);
+
+            }
+
+            .row {
+              padding: 8px;
+              border-radius: 10px;
+              grid-area: row;
+
+            }
+
+            .background_info {
+            	padding: 20px;
+                border-radius: 8px;
+            	grid-area: background_info;
+            }
+
+            .Tekovery {
+            	padding: 8px;
+                border-radius: 10px;
+            	grid-area: Tekovery;
+            }
+
+            .Fordham_Job {
+            	padding: 8px;
+                border-radius: 10px;
+            	grid-area: Fordham_Job;
+            }
+
+            .Robotics_Research {
+            	padding: 8px;
+                border-radius: 15px;
+            	grid-area: Robotics_Research;
+            }
+
+             .Technical_Skills {
+            	padding: 8px;
+                border-radius: 15px;
+            	grid-area: Technical_Skills;
+            }
+
+             .Projects {
+            	padding: 20px;
+                border-radius: 8px;
+            	grid-area: Projects;
+            }
+
+             .SocialNetworkLinks {
+                border-radius: 8px;
+            	grid-area: SocialNetworkLinks;
+            }
+
+            .row_wrapper {
+            	padding: 10px;
+                display: grid;
+                grid-template-areas: 
+                "row"
+                "background_info"
+                "Tekovery"
+                "Fordham_Job"
+                "Robotics_Research"
+                "Technical_Skills"
+                "Projects"
+                "SocialNetworkLinks"
+            }
+               
+               
+            @media only screen and (min-width: 1000px) {
+             .row_wrapper {	
+                grid-template-columns: none;
+                box-shadow: 20px, 40px, 60px, blue;
+                grid-template-areas: 
+                   "row"
+                   "background_info"
+                   "Tekovery"
+                   "Fordham_Job"
+                   "Robotics_Research"
+                   "Technical_Skills"
+                   "Projects"
+                   "SocialNetworkLinks";
+                    max-width: 100%;
+                    font-size: 150%;
+                    text-align: center;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+            
+           /* @media only screen and (max-width: 1000px) {
+            .row_wrapper {
+     	    	width: 100%;
+     	    	text-align: center;
+     	    	margin-left: auto;
+     	    	margin-right: auto;
+     	    	font-size: 150%;
+     	     } 
+     	     .footer_div {
+     	     	width: 100%;
+     	     	text-align: center;
+     	     }
+     	    }*/
+        var dom = document.getElementById("JuanTitle");
+     	</style>
+     	</head>
+     	<body>
+     	    <header>
+     		<h1> Juan Ruiz </h1>
+     	    </header>
+     		<div class="row" style="background-color: violet;"> 
+     		<h2> Juan Ruiz's Portfolio </h2>
+     	    </div>
+     	   
+     		<div class="row_wrapper">
+     			<div class="background_info" style="background-color:green;">
+     				<img id="JuanTitle" src="JuanTitle.jpg" width="400px" height="500px">
+     				<h2> About Me </h2>
+     				<p> I am currently pursuing my Master of Science Degree in Computer Science at Pace University. I am a graduate of Fordham University and received a Bachelor of Science Degree in Computer Science. I am proficient in C++ and Java and I have some background in Python. I am currently exploring CSS and HTML . My interests lie in Software Engineering, Web Design and Android App Development. I also have some experience in the field of Robotics & Artificial Intelligence and I seek to pursue this further. </p>
+     			    </div>
+      			    <div class="Tekovery" style="background-color:orange;">
+     			    	<img id="Tekovery_Inc" src="TekoveryCertificate.jpg" >
+     			    	<h2> Internship At Tekovery, Inc. </h2>
+     			    	<p> From June 2017 to August 2017, I worked on a Summer internship in the areas of IT, networking, computer hardware. Daily tasks involved working with laptops, desktop computers, tablets, monitors, servers, networking equipment, phone and other devices. My responsibilities entailed: Testing, configuring, and preparing computer equipment, Diagnosing hardware and software issue, Repairing/upgrading hardware and software on Linux-, Mac- and Windows-compatible devices, Researching and evaluating new software and hardware when needed, Operating System installation and imaging </p>
+        	        </div>
+        	        <div class="Fordham_Job" style="background-color:crimson;">
+        	        	<img id="Fordham_Logo" src="FordhamShirt.jpg" width="480px" height="554px">
+                        <h2> Fordham University - Web Content Specialist </h2>
+                        <p> Web Content Specialist/ Publisher
+                        From September 2017 to September 2018, I worked as a Web Content Specialist who worked with uploading and editing content to the university portal via a content management system and migrating old webpages to the portal, Configuring page templates, maintaining and updating the website and all of its contents to provide its users with ease of access and a smooth experience when navigating, working in a team of digital content specialists and information architects to push new content to upload in the web, Using Adobe Photoshop and related elements to crop images that will be used as part of the university webpages, Using Jadu XForms Professional / Continuum XFP to build eForms that will be used by clients on the webpages, Troubleshoot the entire portal for broken links , downloads and all other page issues along with other assurance tests for optimal page quality </p>
+                        </div>
+                        <div class="Robotics_Research" style="background-color: silver;">
+                        	<img id="Robot_Project" src="Robotics.jpg" height=500>
+                        	<h2> Fordham Robotics & Computer Vision Lab Research </h2>
+                        	<p> Researcher
+                        	From January 2018 to May 2018, I Worked With Professor And Lead Researcher With Visual Homing/ Artificial Intelligence Project At The Fordham Robotics and Computer Vision Laboratory. The Project Utilized A Large Code Base Programmed With C++, Developed By Professor And Lead Researcher Years Back, My Roles Involved Updating Code Base And Running Performance And Quality Assurance Tests, And Graphing The Data. </p>
+                        </div>
+                        <div class="Technical_Skills" style="background-color: gold;">
+                        	<h2> Skills And Languages </h2>
+                        	<p> ● HTML, SQL, C++ , Java, Python, Unix, Android Studio, Node, React Native 
+                        	    ● Microsoft Suite (Excel, PowerPoint, Word, Access, Outlook) , Google Apps (Docs, Sheets, Slides) 
+                        	    ● Windows, Mac OS X, Google OS , Eclipse IDE, Netbeans IDE, Sublime Text Editor 
+                        	    ● GitHub repositories , Android Studio 
+                        	    ● Bilingual in English and Spanish </p>
+                        </div>
+                        <div class="Projects" style="background-color:brown;">
+                        	<h2> Projects </h2>
+                        	<img id="Currency_Converter" src="TipCalcCurrency.png" height=500>
+                        	<break>
+                        		<img id="Mikhy_Site" src="MkhitaryanPage.jpg" height=500>
+                        	</break>
+                        </div>
+                        <div class="SocialNetworkLinks" style="background-image: linear-gradient(aqua, gold);">
+                        	<h2> Contact Info & Social Media </h2>
+                        	<p> Phone: + 1 347 393 0264 </p>
+                            <a id="Linked-In" style="color:blue" href="https://www.linkedin.com/in/juan-ruiz-4a9440151/"> LinkedIn </a>
+                        </div>
+                    </div>
+                </body>
+                </html>
+                   
